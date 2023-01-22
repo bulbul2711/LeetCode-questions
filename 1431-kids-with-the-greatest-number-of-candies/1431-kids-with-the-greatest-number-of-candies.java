@@ -1,7 +1,7 @@
 class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         
-       ArrayList<Boolean> result=new ArrayList<Boolean>();
+       List<Boolean> result=new ArrayList();
         int max=Integer.MIN_VALUE;
         for(int i=0;i<candies.length;i++)
         {
