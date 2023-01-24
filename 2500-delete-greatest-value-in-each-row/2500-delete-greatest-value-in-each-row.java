@@ -8,8 +8,12 @@ class Solution {
         {
             pq[i]= new PriorityQueue<Integer>((a,b) -> Integer.compare(b,a));
             
-            for(int j=0;j<grid[i].length;j++)
-                pq[i].add(grid[i][j]);
+            for(int x : grid[i])
+                pq[i].add(x);
+            
+            
+        //    for(int j=0;j<grid[i].length;j++)
+        //        pq[i].add(grid[i][j]);
         }
         
         int res=0;
