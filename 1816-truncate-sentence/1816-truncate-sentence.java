@@ -3,8 +3,9 @@ class Solution {
         String str="";
         String arr[]=s.split(" ");
         for(int i=0;i<k;i++)
-        {str+=arr[i];
-        str+=" ";
+        {
+            str+=arr[i]+" ";
+       // str+=" ";
     }
         return str.trim();
         
