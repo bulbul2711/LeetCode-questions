@@ -4,12 +4,11 @@ class Solution {
         int maxlen=Integer.MIN_VALUE;
         int min=Integer.MAX_VALUE;
         for(int i=0;i<rectangles.length;i++)
-            {   int j=0;
-                // for(int j=0;j<rectangles[0].length;j++){
-                     min=Math.min(rectangles[i][j],rectangles[i][j+1]);
-                         a[i]=min;
-            
-    }
+            {   
+                int j=0;
+               min=Math.min(rectangles[i][j],rectangles[i]                   [j+1]);
+                a[i]=min;
+            }
          for(int i=0;i<rectangles.length;i++)
              maxlen=Math.max(maxlen,a[i]);
         
