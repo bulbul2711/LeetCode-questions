@@ -5,9 +5,12 @@ class Solution {
         {
             for(int j=i+1;j<nums.length;j++)
             {
-                if(nums[i]==nums[j] &&nums[i]!=-1 && nums[j]!=-1)
-                {   c++; nums[i]=-1;nums[j]=-1;
-                    break;}
+                if(nums[i]==nums[j] &&                               nums[j]!=-1)
+                {   c++; 
+                // nums[i]=-1;
+                 nums[j]=-1;
+                    break;
+                }
             }
            
         }
