@@ -1,16 +1,6 @@
 class Solution {
     public int repeatedNTimes(int[] nums) {
-//         int temp[]=new int[10];int ans=0;
-//         for(int i=0;i<nums.length;i++)
-//             temp[nums[i]]++;
-        
-//         for(int i=0;i<temp.length;i++)
-//             if(temp[i]>1)
-//             {
-//                 ans=i;
-//                 break;
-//             }
-        int ans=0;
+      /*  int ans=0;
         for(int i=0;i<nums.length;i++)
         {
             for(int j=i+1;j<nums.length;j++)
@@ -20,7 +10,14 @@ class Solution {
                  break;
             }
         }
-    
-        return ans;
-    }
+      return ans;*/
+        
+       //USING ONE LOOP ONLY
+        ArrayList<Integer> al=new ArrayList<>();
+        for(int i=0;i<nums.length;i++)
+        if(al.contains(nums[i])) return nums[i];
+        else
+            al.add(nums[i]);
+        return 0;
+}
 }
