@@ -9,13 +9,8 @@ class Solution {
     }
     
     public int findFinalValue(int[] nums, int original) {
-        while(true){
-            if(isFound(nums,original)){
-                original=original*2;
-            }
-            else{
-                return original;
-            }
-        }
+       while(isFound(nums,original))
+               original*=2;
+        return original;
     }
 }
