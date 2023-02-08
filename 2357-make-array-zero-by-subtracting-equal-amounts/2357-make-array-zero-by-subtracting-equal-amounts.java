@@ -1,6 +1,6 @@
 class Solution {
     public int minimumOperations(int[] nums) {
-        int c=0;
+      /*  int c=0;
         while(!check(nums))
         {
     int m=smallest(nums);
@@ -26,5 +26,13 @@ class Solution {
          for(int i=0;i<arr.length;i++)
              if(arr[i]!=0) return false;
         return true;
+    }*/
+        
+        Set<Integer> set = new HashSet<>();
+        for (int a: nums)
+            if (a > 0)
+                set.add(a);
+        return set.size();
+    
     }
 }
