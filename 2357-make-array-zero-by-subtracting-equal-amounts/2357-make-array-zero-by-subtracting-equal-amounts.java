@@ -28,11 +28,9 @@ class Solution {
         return true;
     }*/
         
-        Set<Integer> set = new HashSet<>();
-        for (int a: nums)
-            if (a > 0)
-                set.add(a);
-        return set.size();
-    
+       HashSet<Integer> hs=new HashSet<>();
+        for(int i=0;i<nums.length;i++)
+            if(nums[i]>0) hs.add(nums[i]);
+        return hs.size();
     }
 }
