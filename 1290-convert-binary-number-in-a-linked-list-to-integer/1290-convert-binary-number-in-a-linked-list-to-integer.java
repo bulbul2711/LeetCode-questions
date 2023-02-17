@@ -10,7 +10,7 @@
  */
 class Solution {
     public int getDecimalValue(ListNode head) {
-        ListNode curr=head;
+        /*ListNode curr=head;
         int num=0;
         int c1=count(head);
         while(curr!=null){
@@ -26,6 +26,14 @@ class Solution {
             c++;
             head1=head1.next;
         }
-        return c;
+        return c;*/
+        
+        //BETTER APPROACH
+        int num=0;
+        while(head!=null){
+        num=num*2+head.val;
+            head=head.next;
     }
+        return num;
+}
 }
