@@ -24,11 +24,11 @@ class Solution {
         return true;*/
         if(head==null || head.next==null) return true;
         ListNode slow=head,fast=head,curr=head;
-        while(fast!=null && fast.next!=null){
+        while(fast!=null && fast.next!=null && fast.next.next!=null){
             slow=slow.next;
             fast=fast.next.next;
         }
-        ListNode headOfreversed=reverse(slow);
+        ListNode headOfreversed=reverse(slow.next);
         while(headOfreversed!=null){
             if(curr.val!=headOfreversed.val)
                 return false;
