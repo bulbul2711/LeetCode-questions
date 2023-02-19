@@ -10,7 +10,9 @@
  */
 class Solution {
     public boolean isPalindrome(ListNode head) {
-        ListNode head1=head;
+        
+        //TC:o(n), AS:O(n)
+   /*     ListNode head1=head;
       ArrayDeque<Integer> stack=new ArrayDeque<>();
         for(ListNode curr=head;curr!=null;curr=curr.next){
             stack.push(curr.val);
@@ -19,6 +21,32 @@ class Solution {
             if(curr.val!=stack.pop())
                 return false;
         }
+        return true;*/
+        if(head==null || head.next==null) return true;
+        ListNode slow=head,fast=head,curr=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        ListNode headOfreversed=reverse(slow);
+        while(headOfreversed!=null){
+            if(curr.val!=headOfreversed.val)
+                return false;
+            curr=curr.next;
+            headOfreversed=headOfreversed.next;
+        }
         return true;
-}
+    }
+        ListNode reverse(ListNode head1){
+            if(head1==null || head1.next==null)
+                return head1;
+            ListNode prev=null,curr1=head1;
+            while(curr1!=null){
+                ListNode next=curr1.next;
+                curr1.next=prev;
+                prev=curr1;
+                curr1=next;
+             }
+            return prev;
+        }
 }
