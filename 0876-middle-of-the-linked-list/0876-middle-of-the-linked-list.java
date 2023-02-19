@@ -10,16 +10,16 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-      /*  if(head==null)
+       if(head==null || head.next==null)
             return head;
         ListNode slow=head,fast=head;
-        while(fast.next!=null && fast!=null)
+        while(fast!=null && fast.next!=null)
         {
             slow=slow.next;
             fast=fast.next.next;
         }
-        return slow;*/
-        int c=0;
+        return slow;
+      /*  int c=0;
         if(head==null)
             return head;
         ListNode curr1=head;
@@ -27,6 +27,6 @@ class Solution {
             c++;
         for(int i=0;i<c/2;i++)
             curr1=curr1.next;
-        return curr1;
+        return curr1;*/
     }
 }
