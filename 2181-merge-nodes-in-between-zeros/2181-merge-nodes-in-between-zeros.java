@@ -17,12 +17,17 @@ class Solution {
                 sum+=curr.val;
                 curr=curr.next;
             } 
-            System.out.print(sum+" ");
-           ListNode new_node=new ListNode(sum);
-            tail.next=new_node;
-            tail=new_node;
+            curr.val=sum;
+            tail.next=curr;
+            tail=curr;
             curr=curr.next;
             sum=0;
+           //  System.out.print(sum+" ");
+           // ListNode new_node=new ListNode(sum);
+           //  tail.next=new_node;
+           //  tail=new_node;
+           //  curr=curr.next;
+           //  sum=0;
         }
         return head1.next;
     }
