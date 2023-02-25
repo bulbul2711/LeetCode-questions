@@ -16,7 +16,7 @@ class Solution {
    //              high=mid-1;
    //      }
    //      return ans;
-        int l=1,r=x;
+        int l=0,r=x;
         if(x==0 || x==1)
             return x;
         while(l<r){
