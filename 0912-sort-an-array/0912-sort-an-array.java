@@ -26,10 +26,10 @@ class Solution {
             left[i]=nums[i];
         for(int i=mid;i<len;i++)
             right[i-mid]=nums[i];
-      left=merge_sort(left);
-      right=merge_sort(right);
+        merge_sort(left);
+        merge_sort(right);
         
-        //int[] sortedvalues=new int[len];
+    
         int l=0,r=0,j=0;
         while(l<left.length && r<right.length){
             if(left[l]<right[r]){
