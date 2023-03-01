@@ -11,7 +11,7 @@
  */
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-      //  ListNode tempA=headA.tempB=headB;
+      //  count the number of nodes to be skipped in bigger linkedlist
         int c1=0,c2=0;
         if(headA==null || headB==null)
              return null;
@@ -28,7 +28,7 @@ public class Solution {
             count--;
         }
          
-         while(headA!=null && headB!=null){
+         while(headA!=null){
              if(headA==headB)
                  return headA;
              headA=headA.next;
