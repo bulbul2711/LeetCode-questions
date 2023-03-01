@@ -21,32 +21,31 @@ class Solution {
         int mid=len/2;
         int left[]=new int[mid];
         int right[]=new int[len-mid];
-        int leftvalue[]=new int[mid];
-        int rightvalue[]=new int[mid];
+       
         for(int i=0;i<mid;i++)
             left[i]=nums[i];
         for(int i=mid;i<len;i++)
             right[i-mid]=nums[i];
-       leftvalue=merge_sort(left);
-       rightvalue=merge_sort(right);
+      left=merge_sort(left);
+      right=merge_sort(right);
         
         int[] sortedvalues=new int[len];
         int l=0,r=0,j=0;
-        while(l<leftvalue.length && r<rightvalue.length){
-            if(leftvalue[l]<rightvalue[r]){
-                sortedvalues[j++]=leftvalue[l];
+        while(l<left.length && r<right.length){
+            if(left[l]<right[r]){
+                sortedvalues[j++]=left[l];
                 l+=1;
             }
             else{
-                sortedvalues[j++]=rightvalue[r];
+                sortedvalues[j++]=right[r];
                 r+=1;
         }
     }
-        while(l<leftvalue.length){
-            sortedvalues[j++]=leftvalue[l++];
+        while(l<left.length){
+            sortedvalues[j++]=left[l++];
         }
-        while(r<rightvalue.length){
-            sortedvalues[j++]=rightvalue[r++];
+        while(r<right.length){
+            sortedvalues[j++]=right[r++];
         }
         return sortedvalues;
 }
