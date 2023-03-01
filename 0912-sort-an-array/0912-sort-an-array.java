@@ -29,24 +29,24 @@ class Solution {
       left=merge_sort(left);
       right=merge_sort(right);
         
-        int[] sortedvalues=new int[len];
+        //int[] sortedvalues=new int[len];
         int l=0,r=0,j=0;
         while(l<left.length && r<right.length){
             if(left[l]<right[r]){
-                sortedvalues[j++]=left[l];
+                nums[j++]=left[l];
                 l+=1;
             }
             else{
-                sortedvalues[j++]=right[r];
+                nums[j++]=right[r];
                 r+=1;
         }
     }
         while(l<left.length){
-            sortedvalues[j++]=left[l++];
+            nums[j++]=left[l++];
         }
         while(r<right.length){
-            sortedvalues[j++]=right[r++];
+            nums[j++]=right[r++];
         }
-        return sortedvalues;
+        return nums;
 }
 }
