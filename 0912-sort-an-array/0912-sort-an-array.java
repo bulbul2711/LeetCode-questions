@@ -19,9 +19,8 @@ class Solution {
         if(len<=1)
             return nums;
         int mid=len/2;
-        int left[]=new int[mid];
-        int right[]=new int[len-mid];
-       
+        int[] left=new int[mid];
+        int[] right=new int[len-mid];
         for(int i=0;i<mid;i++)
             left[i]=nums[i];
         for(int i=mid;i<len;i++)
@@ -29,7 +28,6 @@ class Solution {
         merge_sort(left);
         merge_sort(right);
         
-    
         int l=0,r=0,j=0;
         while(l<left.length && r<right.length){
             if(left[l]<right[r]){
@@ -39,14 +37,12 @@ class Solution {
             else{
                 nums[j++]=right[r];
                 r+=1;
+            }
         }
-    }
-        while(l<left.length){
+        while(l<left.length)
             nums[j++]=left[l++];
-        }
-        while(r<right.length){
+        while(r<right.length)
             nums[j++]=right[r++];
-        }
         return nums;
-}
+    }
 }
