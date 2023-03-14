@@ -1,48 +1,27 @@
 class Solution {
     public int[][] flipAndInvertImage(int[][] image) {
-        
-        // int ar[][] = new int[image.length][image[0].length];
-        // for(int i=0;i<arr.length;i++)
-        // {
-        //     for(int j=0;j<arr[0].length;j++)
-        //         ar[i]
-        return flip(image);
-        
+        for(int i=0;i<image.length;i++){
+            flip(image[i]);
+            invert(image[i]);
+        }
+        return image;
     }
-    int[][] flip(int[][] arr)
-    {
-         for(int i=0;i<arr.length;i++)
-         {
-             int start=0;
-             int end=arr.length-1;
-             while(start<end)
-             {
-                 int temp=arr[i][start];
-                 arr[i][start]=arr[i][end];
-                 arr[i][end]=temp;
-                 
-                 start++;
-                 end--;
-             }
-         }
-        int a[][] = invert(arr);
-        return a;
-    }
-    int[][] invert(int[][] arr)
-    {
-        int a[][]=new int[arr.length][arr[0].length];
-        int res=0;
-        for(int i=0;i<arr.length;i++)
-        {
-            for(int j=0;j<arr[0].length;j++)
-            {
-                if(arr[i][j]==0)
-                    res=1;
+        void flip(int[] a){
+            int l=0,r=a.length-1;
+            while(l<r){
+                int temp=a[l];
+                a[l]=a[r];
+                a[r]=temp;
+                l++;
+                r--;
+            }
+        }
+        void invert(int[] a){
+            for(int i=0;i<a.length;i++){
+                if(a[i]==0)
+                    a[i]=1;
                 else
-                    res=0;
-            a[i][j] = res;
+                    a[i]=0;
+            }
         }
-        }
-        return a;
-    }
 }
