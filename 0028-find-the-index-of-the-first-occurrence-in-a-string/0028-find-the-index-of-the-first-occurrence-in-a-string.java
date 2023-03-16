@@ -1,13 +1,11 @@
 class Solution {
     public int strStr(String haystack, String needle) {
+      int i=0;
         int len=needle.length();
-        int i=0,j=len;
-        while(j+i<=haystack.length()){
-            String str=haystack.substring(i,j+i);
-            if(str.equals(needle))
+        while(i+len<=haystack.length()){
+            if(haystack.substring(i,i+len).equals(needle))
                 return i;
-                i=i+1;
-                
+            i++;
         }
         return -1;
     }
