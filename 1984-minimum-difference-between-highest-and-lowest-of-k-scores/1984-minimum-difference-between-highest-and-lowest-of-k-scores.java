@@ -6,7 +6,6 @@ class Solution {
         int min=Integer.MAX_VALUE;
         while(k<nums.length){
             min=Math.min(min,nums[k]-nums[i]);
-            System.out.print(min+" ");
             i++;
             k++;
         }
