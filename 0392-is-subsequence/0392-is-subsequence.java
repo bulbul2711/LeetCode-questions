@@ -9,9 +9,7 @@ class Solution {
                 j--;
             }
         }
-        if(j==-1)
-            return true;
-        else
-            return false;
+        return j==-1;
+           
     }
 }
