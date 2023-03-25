@@ -16,7 +16,6 @@ class Solution {
             else
                 r--;
         }
-        return res%mod;
+        return res;
     }
-    
-    }
+}
