@@ -12,18 +12,18 @@ class Solution {
     }
     int partition(int[] nums,int left,int right){
         int i=left;
-        int j=right-1;
+        int j=right;
         int pivot=nums[right];
-        while(i<=j){
-            while(i<=j && nums[i]<=pivot)
+        while(i<j){
+            while(i<j && nums[i]<=pivot)
                 i++;
-            while(i<=j && nums[j]>=pivot)
+            while(i<j && nums[j]>=pivot)
                 j--;
-            if(i<j){
+           // if(i<j){
                 int temp=nums[i];
                 nums[i]=nums[j];
                 nums[j]=temp;
-            }
+           // }
         }
         int t=nums[i];
         nums[i]=nums[right];
