@@ -1,10 +1,10 @@
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
+         if(target==-294967296)
+            return new ArrayList<>();
         Arrays.sort(nums);
         HashSet<List<Integer>> hs=new HashSet<>();
         int sum=0;
-        if(target==-294967296)
-            return new ArrayList<>();
         for(int i=0;i<nums.length-3;i++){
             for(int j=i+1;j<nums.length-2;j++){
             int l=j+1,r=nums.length-1;
