@@ -15,12 +15,12 @@ class Solution {
         }
         return c;*/
         
-        int j=3,c=0;
-        for(int i=0;i<s.length()-2;i++){
-            String str=s.substring(i,j);
-            if((str.charAt(0)!=str.charAt(1)) && (str.charAt(1)!=str.charAt(2)) &&  (str.charAt(0)!=str.charAt(2)))
+        int c=0;
+        for(int i=1;i<s.length()-1;i++){
+            if(s.charAt(i-1)!=s.charAt(i) && 
+               s.charAt(i)!=s.charAt(i+1) &&  
+               s.charAt(i-1)!=s.charAt(i+1))
                 c++;
-            j++;
         }
         return c;
     }
