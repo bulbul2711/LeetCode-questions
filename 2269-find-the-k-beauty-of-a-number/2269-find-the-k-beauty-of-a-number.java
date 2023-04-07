@@ -5,7 +5,7 @@ class Solution {
         for(int i=0;i<=str.length()-k;i++){
             int x=Integer.parseInt(str.substring(i,r));
           //  r++;
-            System.out.print(x+" ");
+           // System.out.print(x+" ");
                 if(x!=0 && num%x==0)
                     c++;
             
