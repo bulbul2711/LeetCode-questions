@@ -8,7 +8,7 @@ class Solution {
             else
                 al.remove(al.size()-1);
         }
-        StringBuffer sb=new StringBuffer();
+        StringBuilder sb=new StringBuilder();
         for(int i=0;i<al.size();i++)
             sb.append(al.get(i));
         return sb.toString();
