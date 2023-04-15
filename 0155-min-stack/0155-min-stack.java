@@ -1,7 +1,6 @@
 class MinStack {
     Stack<Integer> st;
     Stack<Integer> minst;
-  //  int min=Integer.MAX_VALUE;
     public MinStack() {
         st=new Stack<>();
         minst=new Stack<>();
