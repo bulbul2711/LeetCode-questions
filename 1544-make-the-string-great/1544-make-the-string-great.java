@@ -13,8 +13,8 @@ class Solution {
             }
         }
         StringBuffer sb=new StringBuffer();
-        while(!st.isEmpty())
-            sb.append(st.pop());
-        return sb.reverse().toString();
+        for(char c:st)
+            sb.append(c);
+        return sb.toString();
     }
 }
