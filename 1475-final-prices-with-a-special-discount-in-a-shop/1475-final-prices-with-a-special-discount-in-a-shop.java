@@ -12,8 +12,7 @@ class Solution {
         
         //Monotonic stack
         Stack<Integer> st=new Stack<>();
-        st.push(0);
-        for(int i=1;i<prices.length;i++){
+        for(int i=0;i<prices.length;i++){
             while(!st.isEmpty() && prices[st.peek()]>=prices[i]){
                 prices[st.pop()]-=prices[i];
             }
