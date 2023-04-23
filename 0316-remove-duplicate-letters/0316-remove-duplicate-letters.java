@@ -1,7 +1,7 @@
 class Solution {
     public String removeDuplicateLetters(String s) {
         HashMap<Character,Integer> map=new HashMap<>();
-        Stack<Character> st=new Stack<>();
+        ArrayDeque<Character> st=new ArrayDeque<>();
         for(int i=0;i<s.length();i++){
             map.put(s.charAt(i),i);
         }
