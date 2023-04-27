@@ -8,7 +8,7 @@ class MyQueue {
     }
     
     public void push(int x) {
-        this.st1.push(x);
+        st1.push(x);
     }
     
     public int pop() {
