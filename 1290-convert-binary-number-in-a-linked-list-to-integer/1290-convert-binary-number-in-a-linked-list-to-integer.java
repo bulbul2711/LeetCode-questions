@@ -10,30 +10,17 @@
  */
 class Solution {
     public int getDecimalValue(ListNode head) {
-        /*ListNode curr=head;
-        int num=0;
-        int c1=count(head);
+        ListNode curr=head;int c=0;
+        int sum=0;
         while(curr!=null){
-            num+=curr.val*Math.pow(2,c1-1);
-            curr=curr.next;
-            c1--;
-        }
-        return num;
-    }
-    int count(ListNode head1){
-        int c=0;
-        while(head1!=null){
             c++;
-            head1=head1.next;
+            curr=curr.next;
         }
-        return c;*/
-        
-        //BETTER APPROACH
-        int num=0;
+        c=c-1;
         while(head!=null){
-        num=num*2+head.val;
+            sum+=(Math.pow(2,c--)*head.val);
             head=head.next;
+        }
+        return sum;
     }
-        return num;
-}
 }
