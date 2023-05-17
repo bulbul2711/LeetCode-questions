@@ -60,7 +60,7 @@ public class Solution {
             count--;
         }
          
-         while(headA!=null && headB!=null){
+         while(headA!=null){
              if(headA==headB)
                  return headA;
              headA=headA.next;
