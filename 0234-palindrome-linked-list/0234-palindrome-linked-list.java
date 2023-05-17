@@ -15,17 +15,7 @@ class Solution {
             slow=slow.next;
             fast=fast.next.next;
         }
-       ListNode newhead= reverse(slow);
-    while(newhead!=null){
-        if(newhead.val!=head.val)
-            return false;
-        head=head.next;
-        newhead=newhead.next;
-    }
-        return true;
-}
-    ListNode reverse(ListNode head1){
-         ListNode curr=head1;
+        ListNode curr=slow;
          ListNode prev=null;
          ListNode Next=curr.next;
          while(curr!=null){
@@ -34,6 +24,12 @@ class Solution {
              prev=curr;
              curr=Next;
          }
-         return prev;
-     }
+    while(prev!=null){
+        if(prev.val!=head.val)
+            return false;
+        head=head.next;
+        prev=prev.next;
+    }
+        return true;
+}
 }
