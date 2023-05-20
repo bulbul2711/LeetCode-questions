@@ -19,13 +19,12 @@ class Solution {
                 tail=tail.next;
             }
             else{
-            ListNode newlist=new ListNode(sum);
-            curr.next=newlist;
-            newlist.next=tail.next;
-            sum=0;
-            tail=tail.next;
-            curr=curr.next;
-        }
+                tail.val=sum;
+                curr.next=tail;
+                curr=curr.next;
+                tail=tail.next;
+                sum=0;
+            }
         }
         return head.next;   
     }
