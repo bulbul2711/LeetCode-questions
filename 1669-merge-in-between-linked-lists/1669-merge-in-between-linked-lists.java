@@ -12,10 +12,14 @@ class Solution {
     public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
         ListNode curr=list1,curr1=list2;
         ListNode start=null,end=null;int c=0;
-        while(curr!=null){
+        while(c!=a){
             if(c==a-1)
                 start=curr;
-            else if(c==b+1)
+            curr=curr.next;
+            c++;
+        }
+        while(c!=b+2){
+            if(c==b+1)
                 end=curr;
             curr=curr.next;
             c++;
