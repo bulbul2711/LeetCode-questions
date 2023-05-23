@@ -10,25 +10,20 @@
  */
 class Solution {
     public ListNode swapNodes(ListNode head, int k) {
-        ListNode curr=head,curr1=head;
-        int c=0,c1=1,c2=1;
-        while(curr!=null){
+        ListNode curr=head,left=head,right=head;
+        while(k-1>0){
+            left=left.next;
             curr=curr.next;
-            c++;
+            k--;
         }
-        curr=head;
-        while(c1!=k){
+        left=curr;
+        while(curr.next!=null){
             curr=curr.next;
-            c1++;
+            right=right.next;
         }
-        int val1=curr.val;
-        while(c2!=c-c1+1){
-            curr1=curr1.next;
-            c2++;
-        }
-        int val2=curr1.val;
-        curr.val=val2;
-        curr1.val=val1;
+        int temp=left.val;
+        left.val=right.val;
+        right.val=temp;
         return head;
     }
 }
