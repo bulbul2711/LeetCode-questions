@@ -12,7 +12,7 @@ class Solution {
     public ListNode reverseKGroup(ListNode head, int k) {
         int c=0;
         ListNode temp=head;
-        while(temp!=null && c<k){
+        while(temp!=null && c!=k){
             temp=temp.next;
             c++;
         }
