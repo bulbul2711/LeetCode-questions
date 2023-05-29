@@ -13,7 +13,6 @@ class Solution {
         
         Stack<Integer> st1=new Stack<>();
         Stack<Integer> st2=new Stack<>();
-        Stack<Integer> st3=new Stack<>();
         while(l1!=null ||l2!=null){
             if(l1!=null){
                 st1.push(l1.val);
@@ -25,7 +24,7 @@ class Solution {
             }
         }
         ListNode dummy=new ListNode(0);
-        ListNode curr=dummy;
+        ListNode curr=null;
         int c=0;
         while(!st1.isEmpty() || !st2.isEmpty() ||c!=0){
             int val1=!st1.isEmpty()?st1.pop():0;
@@ -33,12 +32,8 @@ class Solution {
             int val=val1+val2+c;
             c=val/10;
             val=val%10;
-            st3.push(val);   
+            curr=new ListNode(val,curr);
         }
-        while(!st3.isEmpty()){
-            curr.next=new ListNode(st3.pop());
-            curr=curr.next;
-        }
-        return dummy.next;
+        return curr;
     }
 }
