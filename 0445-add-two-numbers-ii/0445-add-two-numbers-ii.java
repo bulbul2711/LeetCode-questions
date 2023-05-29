@@ -11,8 +11,8 @@
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         
-        Stack<Integer> st1=new Stack<>();
-        Stack<Integer> st2=new Stack<>();
+        ArrayDeque<Integer> st1=new ArrayDeque<>();
+        ArrayDeque<Integer> st2=new ArrayDeque<>();
         while(l1!=null ||l2!=null){
             if(l1!=null){
                 st1.push(l1.val);
