@@ -23,7 +23,6 @@ class Solution {
                 l2=l2.next;
             }
         }
-        ListNode dummy=new ListNode(0);
         ListNode curr=null;
         int c=0;
         while(!st1.isEmpty() || !st2.isEmpty() ||c!=0){
