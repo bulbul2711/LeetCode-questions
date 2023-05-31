@@ -4,24 +4,21 @@ class MyHashSet {
     public MyHashSet() {
         a=new ArrayList[size];
     }
-    public int hash(int key){
-        return key%size;
-    }
     public void add(int key) {
-        int h=hash(key);
+        int h=key%size;
         if(a[h]==null)
             a[h]=new ArrayList<>();
         if(!a[h].contains(key))
             a[h].add(key);
     }
     public void remove(int key) {
-        int h=hash(key);
+        int h=key%size;
         if(a[h]!=null)
             a[h].remove(Integer.valueOf(key));
     }
     
     public boolean contains(int key) {
-        int h=hash(key);
+        int h=key%size;
         return a[h]!=null && a[h].contains(key);
     }
 }
