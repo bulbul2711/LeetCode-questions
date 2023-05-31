@@ -1,5 +1,5 @@
 class MyHashSet {
-    int size=100;
+    int size=10000;
     ArrayList<Integer>[] a;
     public MyHashSet() {
         a=new ArrayList[size];
