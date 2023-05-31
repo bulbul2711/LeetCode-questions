@@ -1,13 +1,11 @@
 class MyHashSet {
-    int a[]=new int[(int)Math.pow(10,6)+1];
+    int a[]=new int[(int)1e6+1];
     public MyHashSet() {
         
     }
     
     public void add(int key) {
-        if(a[key]==1)
-            return;
-        else
+        if(a[key]==0)
             a[key]=1;
     }
     public void remove(int key) {
