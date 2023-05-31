@@ -1,22 +1,28 @@
 class MyHashSet {
-    int a[]=new int[(int)1e6+1];
+    int size=(int)(1e6+1);
+    ArrayList<Integer>[] a;
     public MyHashSet() {
-        
+        a=new ArrayList[size];
     }
-    
+    public int hash(int key){
+        return key%size;
+    }
     public void add(int key) {
-        if(a[key]==0)
-            a[key]=1;
+        int h=hash(key);
+        if(a[h]==null)
+            a[h]=new ArrayList<>();
+        if(!a[h].contains(key))
+            a[h].add(key);
     }
     public void remove(int key) {
-        if(a[key]==1)
-            a[key]=0;
+        int h=hash(key);
+        if(a[h]!=null)
+            a[h].remove(Integer.valueOf(key));
     }
     
     public boolean contains(int key) {
-        if(a[key]==1)
-            return true;
-    return false;
+        int h=hash(key);
+        return a[h]!=null && a[h].contains(key);
     }
 }
 
