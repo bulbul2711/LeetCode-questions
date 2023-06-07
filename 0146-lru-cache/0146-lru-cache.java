@@ -11,6 +11,7 @@ class LRUCache {
     ListNode head=new ListNode(0,0);
     ListNode tail=new ListNode(0,0);
     int cap=0;
+    
     public LRUCache(int capacity) {
         head.next=tail;
         tail.prev=head;
