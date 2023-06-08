@@ -13,17 +13,13 @@ class Solution {
         if(head==null) 
             return head;
         ListNode curr=head;
-        ListNode curr1=head;
         int len=1;
         while(curr.next!=null){
             len++;
             curr=curr.next;
         }
-        
-        curr1=curr;
+        curr.next=head;
         k=k%len;
-        if(k==0)
-            return head;
         int c=len-k-1;
         curr=head;
         while(c>0){
@@ -32,7 +28,6 @@ class Solution {
         }
         ListNode newhead=curr.next;
         curr.next=null;
-        curr1.next=head;
         return newhead;
     }
 }
