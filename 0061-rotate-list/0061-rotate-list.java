@@ -21,7 +21,6 @@ class Solution {
         }
         
         curr1=curr;
-       
         k=k%len;
         if(k==0)
             return head;
