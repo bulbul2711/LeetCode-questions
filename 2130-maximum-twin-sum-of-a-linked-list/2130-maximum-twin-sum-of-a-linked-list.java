@@ -29,8 +29,8 @@ class Solution {
         }
         }
         return max;*/
-        if(head==null) return 0;
-        if(head.next.next==null) return head.val+head.next.val;
+        // if(head==null) return 0;
+        // if(head.next.next==null) return head.val+head.next.val;
         int sum=0;
         ListNode slow=head,fast=head,curr=head;
           while(fast!=null && fast.next!=null)  {
