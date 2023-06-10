@@ -28,7 +28,7 @@ class Solution {
         // }
         // return max;
         
-        Stack<Integer> st=new Stack<>();
+        ArrayDeque<Integer> st=new ArrayDeque<>();
         ListNode curr=head;
         int c=0,sum=0;
         int max=Integer.MIN_VALUE;
