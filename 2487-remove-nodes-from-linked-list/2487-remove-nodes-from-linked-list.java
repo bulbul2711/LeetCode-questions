@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode removeNodes(ListNode head) {
-        Stack<Integer> st=new Stack<>();
+        ArrayDeque<Integer> st=new ArrayDeque<>();
         ListNode curr=head.next;
         st.push(head.val);
         while(curr!=null){
