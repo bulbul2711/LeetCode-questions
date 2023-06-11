@@ -29,7 +29,7 @@ class Solution {
                 curr=curr.next;
                 size--;
             }
-            if(extra>0 && curr!=null){
+            if(extra>0){
                 prev=curr;
                 curr=curr.next;
                 extra--;
