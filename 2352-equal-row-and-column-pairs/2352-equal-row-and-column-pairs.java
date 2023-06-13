@@ -10,10 +10,8 @@ class Solution {
                 sb+=grid[i][j];
                  sb+=",";
             }
-           System.out.println(sb+" ");
             map.put(sb,map.getOrDefault(sb,0)+1);
-            
-            //System.out.print(sb);
+          
         }
         
         for(int k=0;k<grid.length;k++){
@@ -25,9 +23,6 @@ class Solution {
             if(map.containsKey(sb1))
                 c+=map.get(sb1);
         }
-        // for(Map.Entry<StringBuffer,Integer> entry:map.entrySet()){
-        //     System.out.println(entry.getKey()+":"+entry.getValue());
-        // }
         return c;
     }
 }
