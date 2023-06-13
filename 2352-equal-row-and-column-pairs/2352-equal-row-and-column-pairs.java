@@ -10,9 +10,9 @@ class Solution {
                 sb.append(grid[i][j]);
                  sb.append(",");
             }
-            System.out.println(sb);
+           
             map.put(sb.toString(),map.getOrDefault(sb.toString(),0)+1);
-           // sb.delete(0,sb.length());
+        
         }
         
         for(int k=0;k<grid.length;k++){
@@ -21,11 +21,11 @@ class Solution {
                 sb1.append(grid[l][k]);
                  sb1.append(",");
             }
-              System.out.println(sb1);
+             
             if(map.containsKey(sb1.toString()))
                 c+=map.get(sb1.toString());
-              System.out.println(c);
-              // sb1.delete(0,sb1.length());
+            
+            
         }
         return c;
     }
