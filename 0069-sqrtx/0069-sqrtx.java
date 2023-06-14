@@ -16,6 +16,8 @@ class Solution {
    //              high=mid-1;
    //      }
    //      return ans;
+        
+        
         int l=1,r=x;
         if(x==0 || x==1)
             return x;
@@ -27,5 +29,6 @@ class Solution {
                 r=mid; 
         }
         return l-1;
+
     }
 }
