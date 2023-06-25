@@ -14,6 +14,8 @@ class Solution {
             return;
         }
         for(int i=0;i<candidates.length;i++){
+            if(candidates[i]>target)
+                continue;
             List<Integer> al=new ArrayList<>(ds);
             al.add(candidates[i]);
             dfs(Arrays.copyOfRange(candidates,i,candidates.length),target-candidates[i],al,res);
