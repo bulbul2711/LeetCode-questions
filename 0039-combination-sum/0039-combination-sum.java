@@ -1,21 +1,22 @@
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
+   
         List<List<Integer>> res=new ArrayList<>();
-        List<Integer> al=new ArrayList<>();
-        possible(0,target,al,candidates,res);
+        List<Integer> ds=new ArrayList<>();
+        dfs(candidates,target,ds,res);
         return res;
-    }
-    public void possible(int ind,int target,List<Integer> al,int a[],List<List<Integer>> res){
-        if(ind==a.length){
-            if(target==0)
-               res.add(new ArrayList<>(al));  
-                return;
         }
-        if(a[ind]<=target){
-            al.add(a[ind]);
-            possible(ind,target-a[ind],al,a,res);
-            al.remove(al.size()-1);
+    public void dfs(int[] candidates,int target,List<Integer> ds,List<List<Integer>> res){
+        if(target<0)
+            return; //backtracking
+        if(target==0){
+            res.add(ds);
+            return;
         }
-        possible(ind+1,target,al,a,res);
+        for(int i=0;i<candidates.length;i++){
+            List<Integer> al=new ArrayList<>(ds);
+            al.add(candidates[i]);
+            dfs(Arrays.copyOfRange(candidates,i,candidates.length),target-candidates[i],al,res);
+        }
     }
 }
