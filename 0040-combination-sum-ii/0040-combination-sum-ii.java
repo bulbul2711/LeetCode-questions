@@ -1,25 +1,26 @@
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        List<List<Integer>> res = new ArrayList<>();
+        List<List<Integer>> res=new ArrayList<>();
         List<Integer> ds=new ArrayList<>();
         Arrays.sort(candidates);
-        possible(0,target,ds,candidates,res);
+        dfs(candidates,target,ds,res);
         return res;
-    }
-    public void possible(int ind,int target,List<Integer> ds,int[] candidates,List<List<Integer>> res){
+        }
+    public void dfs(int[] candidates,int target,List<Integer> ds,List<List<Integer>> res){
+        if(target<0)
+            return; //backtracking  isme ham add kar rhe hain path main or jab sum bada ho jaa rha ta                           backtrack kar rhe hai
         if(target==0){
-            res.add(new ArrayList<>(ds));
+            res.add(ds);
             return;
         }
-        for(int i=ind;i<candidates.length;i++){
-            if(i>ind && candidates[i]==candidates[i-1])
+        for(int i=0;i<candidates.length;i++){
+            if(i>0 && candidates[i]==candidates[i-1])
                 continue;
-            if(candidates[i]>target){ 
-                break;
-            }
-            ds.add(candidates[i]);
-            possible(i+1,target-candidates[i],ds,candidates,res);
-            ds.remove(ds.size()-1);
-        }
+            if(candidates[i]>target)   //ham isme value add hi nahi kar rhe, path me jo target se badi ho
+                break;                  //esliye yeh optimized h
+            List<Integer> al=new ArrayList<>(ds);
+            al.add(candidates[i]);
+            dfs(Arrays.copyOfRange(candidates,i+1,candidates.length),target-candidates[i],al,res);
     }
+}
 }
