@@ -7,8 +7,8 @@ class Solution {
         return res;
         }
     public void dfs(int[] candidates,int target,List<Integer> ds,List<List<Integer>> res){
-        if(target<0)
-            return; //backtracking  isme ham add kar rhe hain path main or jab sum bada ho jaa rha ta                           backtrack kar rhe hai
+        // if(target<0)
+        //     return; //backtracking  isme ham add kar rhe hain path main or jab sum bada ho jaa rha ta                           backtrack kar rhe hai
         if(target==0){
             res.add(ds);
             return;
