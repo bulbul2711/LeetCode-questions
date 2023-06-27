@@ -13,10 +13,10 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             List<Integer> al=new ArrayList<>(ds);
             al.add(nums[i]);
-            dfs(remove(nums,i),al,res);
+            dfs(removeIthIndex(nums,i),al,res);
         }
     }
-    public int[] remove(int[] nums,int index){
+    public int[] removeIthIndex(int[] nums,int index){
         int[] a=new int[nums.length-1];
         int j=0;
         for(int i=0;i<nums.length;i++){
