@@ -8,8 +8,10 @@ class Solution {
         return res;
     }
     public void dfs(String s, int dots, String path, List<String> res){
-        if(dots==4 && s.length()==0){
+        if(dots==4){
+            if(s.length()==0){
             res.add(path.substring(0,path.length()-1));
+            }
             return;
         }
         for(int i=1;i<4;i++){
