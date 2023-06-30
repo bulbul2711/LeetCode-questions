@@ -10,11 +10,13 @@ class Solution {
         map.put('D',500);
         map.put('M',1000);
         int n=s.length();
-        for(int i=0;i<n;i++){
+        num+=map.get(s.charAt(0));
+        for(int i=1;i<n;i++){
             int a=map.get(s.charAt(i));
+            int b=map.get(s.charAt(i-1));
             num+=a;
-            if(i>0 && map.get(s.charAt(i-1))<a)
-                num-=(2*map.get(s.charAt(i-1)));
+            if(b<a)
+               num-=(2*b);
         }
         return num;
     }
