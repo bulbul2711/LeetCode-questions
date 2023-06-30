@@ -9,9 +9,11 @@ class Solution {
         map.put('C',100);
         map.put('D',500);
         map.put('M',1000);
-        for(int i=0;i<s.length();i++){
-            num+=map.get(s.charAt(i));
-            if(i>0 && map.get(s.charAt(i-1))<map.get(s.charAt(i)))
+        int n=s.length();
+        for(int i=0;i<n;i++){
+            int a=map.get(s.charAt(i));
+            num+=a;
+            if(i>0 && map.get(s.charAt(i-1))<a)
                 num-=(2*map.get(s.charAt(i-1)));
         }
         return num;
