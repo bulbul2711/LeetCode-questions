@@ -3,11 +3,7 @@ class Solution {
         ArrayList<Integer> al=new ArrayList<>();
         HashMap<Integer,Integer> hmap=new HashMap<>();
         for(int i=0;i<nums1.length;i++){
-            if(hmap.containsKey(nums1[i])){
-                hmap.put(nums1[i],hmap.get(nums1[i])+1);
-            }
-            else
-                hmap.put(nums1[i],1);
+                hmap.put(nums1[i],hmap.getOrDefault(nums1[i],0)+1);
         }
           for(int i=0;i<nums2.length;i++){
               if(hmap.containsKey(nums2[i]) && hmap.get(nums2[i])>0){
