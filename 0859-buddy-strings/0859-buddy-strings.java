@@ -3,21 +3,21 @@ class Solution {
         if(s.length()!=goal.length())
             return false;
         int c=0;
-        HashMap<Character,Integer> map=new HashMap<>();
+        HashSet<Character> map=new HashSet<>();
         List<Integer> list=new ArrayList<>();
         int a=0;
        while(a<s.length()){
            if(s.charAt(a)!=goal.charAt(a)){
                list.add(a);
            }
-           map.put(s.charAt(a),map.getOrDefault(s.charAt(a),0)+1);
+           map.add(s.charAt(a));
            a++;
        }
         if(s.equals(goal)){
-            for(char key:map.keySet())
-                if(map.get(key)>1)
-                    return true;
-            return false;
+           if(map.size()!=s.length())
+               return true;
+            else
+               return false;
         }
         else{
             if(list.size()!=2)
