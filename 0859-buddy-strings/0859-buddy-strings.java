@@ -2,23 +2,21 @@ class Solution {
     public boolean buddyStrings(String s, String goal) {
         if(s.length()!=goal.length())
             return false;
-       // HashSet<Character> set=new HashSet<>();
-        boolean flag=false;
-        int[] freq=new int[26];
+        HashSet<Character> set=new HashSet<>();
         List<Integer> list=new ArrayList<>();
         int a=0;
        while(a<s.length()){
            if(s.charAt(a)!=goal.charAt(a)){
                list.add(a);
            }
-           freq[s.charAt(a)-'a']++;
-           if(freq[s.charAt(a)-'a']>1)
-               flag=true;
+           set.add(s.charAt(a));
            a++;
        }
         if(s.equals(goal)){
-           if(flag)
+           if(set.size()!=s.length())
                return true;
+            else
+               return false;
         }
         else{
             if(list.size()!=2)
