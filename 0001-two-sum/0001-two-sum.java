@@ -11,6 +11,7 @@ class Solution {
             res[1]=i;
              break;
             }
+            else
             map.put(nums[i],i);
         }
         return res;
