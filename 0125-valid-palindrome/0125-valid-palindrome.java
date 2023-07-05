@@ -23,7 +23,8 @@ class Solution {
                  j--;
             if(s1.charAt(i)!=s1.charAt(j))
                 return false;
-            i++;j--;
+            i++;
+            j--;
            
         }
         return true;
