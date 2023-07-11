@@ -5,16 +5,15 @@ class Solution {
         if(m*n!=r*c)
             return mat;
         int res[][]=new int[r][c];
-        List<Integer> al=new ArrayList<>();
-        for(int i=0;i<m;i++){
-            for(int j=0;j<n;j++){
-                al.add(mat[i][j]);
-            }
-        }
-        int a=0;
+        int row=0,col=0;
         for(int i=0;i<r;i++){
             for(int j=0;j<c;j++){
-                res[i][j]=al.get(a++);
+                if(col==n){
+                    row++;
+                    col=0;
+                }
+                res[i][j]=mat[row][col];
+                col++;
             }
         }
         return res;
