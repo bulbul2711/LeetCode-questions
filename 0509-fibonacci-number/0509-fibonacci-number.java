@@ -1,8 +1,6 @@
 class Solution {
     public int fib(int n) {
-        if(n<=1) return n;
         int dp[]=new int[n+1];
-        //Arrays.fill(dp,-1);
         return fibo(n,dp);
     }
     int fibo(int n,int[] dp){
