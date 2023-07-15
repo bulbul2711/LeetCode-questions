@@ -1,21 +1,14 @@
 class Solution {
     public int fib(int n) {
-       // if(n==0)
-       //      return 0;
-       //  if(n==1)
-       //      return 1;
-       //  return fib(n-1)+fib(n-2);
-     
- /*  =========recusive = 10ms , iterative = 0ms=============   */  
-        if(n==0) return 0;
-        if(n==1) return 1;
-        int a=0,b=1,c=0;
-        for(int i=2;i<=n;i++)
-        {
-            c=a+b;
-            a=b;
-            b=c;
-        }
-       return c;  
+        if(n<=1) return n;
+        int dp[]=new int[n+1];
+        Arrays.fill(dp,-1);
+        return fibo(n,dp);
+    }
+    int fibo(int n,int[] dp){
+        if(n<=1) return n;
+        else if(dp[n]!=-1) return dp[n];
+        dp[n]=fibo(n-1,dp)+fibo(n-2,dp);
+        return dp[n];
     }
 }
