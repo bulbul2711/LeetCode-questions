@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode swapPairs(ListNode head) {
-        ListNode dummy=new ListNode(0,head);
+       ListNode dummy=new ListNode(0,head);
         ListNode curr=dummy;
         while(curr.next!=null && curr.next.next!=null){
             ListNode temp1=curr.next;
