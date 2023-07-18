@@ -22,14 +22,14 @@ class Solution {
             prev=curr;
             curr=nxt;
         }
-        ListNode head1=head,head2=prev,nxt1=null,nxt2=null;
-        while(head2.next!=null){
+        ListNode head1=head,nxt1=null,nxt2=null;
+        while(prev.next!=null){
             nxt1=head1.next;
-            nxt2=head2.next;
-            head1.next=head2;
-            head2.next=nxt1;
+            nxt2=prev.next;
+            head1.next=prev;
+            prev.next=nxt1;
             head1=nxt1;
-            head2=nxt2;
+            prev=nxt2;
         }
     }
 }
