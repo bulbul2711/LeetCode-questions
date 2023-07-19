@@ -7,14 +7,16 @@ class Solution {
             row=new boolean[n+1];
             col=new boolean[n+1];
             for(int j=0;j<n;j++){
-                if(row[matrix[i][j]]==true || col[matrix[j][i]]==true)
+                int rval=matrix[i][j];
+                int cval=matrix[j][i];
+                if(row[rval]==true || col[cval]==true)
                     return false;
                 else{
-                    row[matrix[i][j]]=true;
-                    col[matrix[j][i]]=true;
+                    row[rval]=true;
+                    col[cval]=true;
                 }
             }
         }
-            return true;
+        return true;
     }
 }
