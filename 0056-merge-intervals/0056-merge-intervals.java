@@ -8,6 +8,6 @@ class Solution {
             else
                 res.add(i);
         }
-        return res.toArray(new int[res.size()][0]);
+        return res.toArray(new int[res.size()][]);
     }
 }
