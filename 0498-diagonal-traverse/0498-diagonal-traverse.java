@@ -1,8 +1,6 @@
 class Solution {
     public int[] findDiagonalOrder(int[][] mat) {
         int m=mat.length,n=mat[0].length;
-        if(m==0 || n==0)
-            return new int[0];
         int res[]=new int[m*n];
         int x=0,row=0,col=0;
         boolean up=true;
