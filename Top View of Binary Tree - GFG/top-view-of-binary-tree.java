@@ -142,17 +142,17 @@ class Solution
         if(root==null) return res;
         Queue<pair> q=new LinkedList<>();        //(Node,vertical)
         Map<Integer,Integer> map=new TreeMap<>(); //(vertical,Node.data)
-        q.offer(new pair(root,0));
+        q.add(new pair(root,0));
         while(!q.isEmpty()){
-            pair p=q.poll();
+            pair p=q.remove();
             Node temp=p.node;
             int vert=p.v;
             if(!map.containsKey(vert))
                map.put(vert,temp.data);
             if(temp.left!=null)
-               q.offer(new pair(temp.left,vert-1));
+               q.add(new pair(temp.left,vert-1));
             if(temp.right!=null)
-               q.offer(new pair(temp.right,vert+1));
+               q.add(new pair(temp.right,vert+1));
         }
         for(Map.Entry<Integer,Integer> entry: map.entrySet())
            res.add(entry.getValue());
