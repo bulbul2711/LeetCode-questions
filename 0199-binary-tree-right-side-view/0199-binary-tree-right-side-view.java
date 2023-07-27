@@ -25,7 +25,7 @@ class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         ArrayList<Integer> res=new ArrayList<>();
         if(root==null) return res;
-        Queue<pair> q=new LinkedList<>();        //(Node,level)
+        Queue<pair> q=new ArrayDeque<>();        //(Node,level)
         Map<Integer,Integer> map=new TreeMap<>(); //(level,Node.data)
         q.offer(new pair(root,0));
         while(!q.isEmpty()){
