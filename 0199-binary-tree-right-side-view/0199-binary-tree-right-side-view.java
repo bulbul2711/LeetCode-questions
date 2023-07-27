@@ -27,17 +27,17 @@ class Solution {
         if(root==null) return res;
         Queue<pair> q=new LinkedList<>();        //(Node,level)
         Map<Integer,Integer> map=new TreeMap<>(); //(level,Node.data)
-        q.add(new pair(root,0));
+        q.offer(new pair(root,0));
         while(!q.isEmpty()){
-            pair p=q.remove();
+            pair p=q.poll();
             TreeNode temp=p.node;
             int level=p.level;
             if(!map.containsKey(level))
                map.put(level,temp.val);
             if(temp.right!=null)
-               q.add(new pair(temp.right,level+1));
+               q.offer(new pair(temp.right,level+1));
             if(temp.left!=null)
-               q.add(new pair(temp.left,level+1));
+               q.offer(new pair(temp.left,level+1));
         }
         for(Map.Entry<Integer,Integer> entry: map.entrySet())
            res.add(entry.getValue());
