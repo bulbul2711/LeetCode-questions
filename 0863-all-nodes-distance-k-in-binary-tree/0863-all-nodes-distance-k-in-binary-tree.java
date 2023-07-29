@@ -11,7 +11,7 @@ class Solution {
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         Map<TreeNode,TreeNode> parentTrack=new HashMap<>();
         markParent(root,parentTrack);
-        Queue<TreeNode> q=new LinkedList<>();
+        Queue<TreeNode> q=new ArrayDeque<>();
         Map<TreeNode,Boolean> visited=new HashMap<>();
         q.offer(target);
         visited.put(target,true);
@@ -44,7 +44,7 @@ class Solution {
         return res;
     }
     void markParent(TreeNode root,Map<TreeNode,TreeNode> parentTrack){
-        Queue<TreeNode> q=new LinkedList<>();
+        Queue<TreeNode> q=new ArrayDeque<>();
         q.offer(root);
         while(!q.isEmpty()){
             TreeNode curr=q.poll();
