@@ -9,13 +9,14 @@ class Solution {
         return res;
     }
     void dfs(int[]a, int k, List<Integer> path, List<List<Integer>> res){
+        if(path.size()>k)
+            return;
         if(path.size()==k){
             res.add(path);
             return;
         }
         for(int i=0;i<a.length;i++){
-            if(path.size()>k)
-                continue;
+            
             List<Integer> al=new ArrayList<>(path);
             al.add(a[i]);
             dfs(Arrays.copyOfRange(a,i+1,a.length), k, al, res);
