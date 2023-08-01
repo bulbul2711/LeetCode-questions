@@ -9,8 +9,8 @@ class Solution {
         return res;
     }
     void dfs(int[]a, int k, List<Integer> path, List<List<Integer>> res){
-        if(path.size()>k)
-            return;
+        // if(path.size()>k)
+        //     return;
         if(path.size()==k){
             res.add(path);
             return;
