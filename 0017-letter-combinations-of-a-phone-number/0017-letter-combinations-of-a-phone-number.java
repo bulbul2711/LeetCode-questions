@@ -20,11 +20,11 @@ class Solution {
     public void dfs(String digits,int index,HashMap<Character,String> map,String str,List<String> res){
         if(str.length()==digits.length()){
             res.add(str);
-            return;
+            return;  //backtrack
         }
         String s=map.get(digits.charAt(index));
         for(int i=0;i<s.length();i++){
-            dfs(digits,index+1,map,str+s.charAt(i),res);
+            dfs(digits, index+1, map, str+s.charAt(i), res);
         }
     }
 }
