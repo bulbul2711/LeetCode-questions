@@ -7,7 +7,6 @@ class Solution {
                     if(words[i].charAt(1)==words[j].charAt(0)){
                         c++;
                         j=words.length;
-                        //System.out.println(words[i]);
                     }
                 }
             }
