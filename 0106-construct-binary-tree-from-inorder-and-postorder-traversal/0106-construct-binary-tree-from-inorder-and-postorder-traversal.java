@@ -24,11 +24,11 @@ class Solution {
     TreeNode build(int[] inorder,int inS,int inE, int[] postorder,int poS,int poE, Map<Integer,Integer> map){
         if(inS>inE || poS>poE)
             return null;
+        TreeNode root=new TreeNode(postorder[poE]);
         int inroot=map.get(postorder[poE]);
-        TreeNode root=new TreeNode(inorder[inroot]);
-        int numsRight=inE-inroot;
-        root.left = build(inorder,inS,inroot-1, postorder,poS,poE-numsRight-1, map);
-        root.right=build(inorder,inroot+1,inE, postorder,poE-numsRight,poE-1, map);
+        int numsLeft=inroot-inS;
+        root.left = build(inorder,inS,inroot-1, postorder,poS,poS+numsLeft-1, map);
+        root.right=build(inorder,inroot+1,inE, postorder,poS+numsLeft,poE-1, map);
         return root;
     }
 }
