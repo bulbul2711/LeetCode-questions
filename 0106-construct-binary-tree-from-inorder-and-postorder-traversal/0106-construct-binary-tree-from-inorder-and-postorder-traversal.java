@@ -22,7 +22,7 @@ class Solution {
         return root;
     }
     TreeNode build(int[] inorder,int inS,int inE, int[] postorder,int poS,int poE, Map<Integer,Integer> map){
-        if(inS>inE && poS>poE)
+        if(inS>inE || poS>poE)
             return null;
         int inroot=map.get(postorder[poE]);
         TreeNode root=new TreeNode(inorder[inroot]);
