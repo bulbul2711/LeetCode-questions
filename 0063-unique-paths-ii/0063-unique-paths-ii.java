@@ -6,8 +6,8 @@ class Solution {
              return 0;
         for(int i=m-1;i>=0;i--){
             for(int j=n-1;j>=0;j--){
-                if(i==m-1 && j==n-1)
-                    dp[i][j]=1;
+                if(i==m-1 && j==n-1)      
+                    dp[i][j]=1;  //if we write this condition outside                                           loop then the next condition in loop                                             (just after this one) will be true.and                                           answer will never come.
                 else if(dp[i][j]==1)
                     dp[i][j]=0;
                 else if(i==m-1)
