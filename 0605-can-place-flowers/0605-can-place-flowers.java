@@ -5,9 +5,8 @@ class Solution {
                 a[i]=1;
                 n--;
             }
-            if(n<=0)
-                return true;
+            
         }
-        return false;
+        return n<=0;
     }
 }
