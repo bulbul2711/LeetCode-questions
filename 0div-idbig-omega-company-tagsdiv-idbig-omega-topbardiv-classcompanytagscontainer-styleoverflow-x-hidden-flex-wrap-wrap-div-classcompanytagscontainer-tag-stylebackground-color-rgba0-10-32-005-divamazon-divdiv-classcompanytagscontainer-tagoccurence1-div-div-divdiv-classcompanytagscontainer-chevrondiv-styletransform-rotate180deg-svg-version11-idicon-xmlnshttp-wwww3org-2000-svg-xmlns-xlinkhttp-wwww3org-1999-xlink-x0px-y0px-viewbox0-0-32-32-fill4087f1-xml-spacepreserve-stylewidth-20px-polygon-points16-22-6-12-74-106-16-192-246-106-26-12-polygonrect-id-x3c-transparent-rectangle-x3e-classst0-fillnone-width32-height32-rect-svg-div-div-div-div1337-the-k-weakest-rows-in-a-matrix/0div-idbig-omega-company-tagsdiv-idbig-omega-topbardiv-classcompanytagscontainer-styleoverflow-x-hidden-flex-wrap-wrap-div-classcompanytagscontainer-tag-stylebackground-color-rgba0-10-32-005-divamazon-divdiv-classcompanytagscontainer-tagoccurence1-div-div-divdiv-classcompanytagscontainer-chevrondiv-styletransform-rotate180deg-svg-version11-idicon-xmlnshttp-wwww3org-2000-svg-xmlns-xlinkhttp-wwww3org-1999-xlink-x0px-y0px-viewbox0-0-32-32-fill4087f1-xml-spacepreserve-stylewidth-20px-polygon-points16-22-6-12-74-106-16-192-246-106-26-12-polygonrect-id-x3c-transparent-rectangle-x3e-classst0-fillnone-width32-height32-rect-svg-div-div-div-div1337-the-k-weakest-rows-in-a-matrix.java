@@ -6,7 +6,6 @@ class Solution {
             for(int j=0;j<mat[0].length;j++){
                 if(mat[i][j]==0)
                     break;
-                else
                 c++;
             }
             a[i][0]=i;
