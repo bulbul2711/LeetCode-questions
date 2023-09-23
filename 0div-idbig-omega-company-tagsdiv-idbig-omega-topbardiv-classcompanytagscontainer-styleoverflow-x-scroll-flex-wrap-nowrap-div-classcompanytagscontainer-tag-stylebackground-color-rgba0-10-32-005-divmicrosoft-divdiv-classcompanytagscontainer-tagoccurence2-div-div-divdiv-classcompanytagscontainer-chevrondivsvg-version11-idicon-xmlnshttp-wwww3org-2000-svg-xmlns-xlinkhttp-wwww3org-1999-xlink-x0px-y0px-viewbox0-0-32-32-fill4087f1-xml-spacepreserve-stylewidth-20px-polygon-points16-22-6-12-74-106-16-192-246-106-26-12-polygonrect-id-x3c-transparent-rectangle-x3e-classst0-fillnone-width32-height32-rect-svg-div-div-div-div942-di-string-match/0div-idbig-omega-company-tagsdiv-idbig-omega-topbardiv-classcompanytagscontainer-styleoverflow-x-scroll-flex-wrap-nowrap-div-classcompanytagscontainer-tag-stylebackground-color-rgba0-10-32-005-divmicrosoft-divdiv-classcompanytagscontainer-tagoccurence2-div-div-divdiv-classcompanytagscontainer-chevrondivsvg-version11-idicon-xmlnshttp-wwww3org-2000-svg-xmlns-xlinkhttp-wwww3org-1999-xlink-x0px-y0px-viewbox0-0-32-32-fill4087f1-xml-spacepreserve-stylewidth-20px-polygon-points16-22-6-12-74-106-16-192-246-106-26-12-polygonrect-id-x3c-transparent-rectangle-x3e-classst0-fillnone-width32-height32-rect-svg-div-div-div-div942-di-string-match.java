@@ -9,7 +9,7 @@ class Solution {
             else if(s.charAt(i)=='D')
                 res[i]=b--;
         }
-        res[res.length-1]=a;
+        res[n]=a;
         return res;
     }
 }
