@@ -6,7 +6,7 @@ class Solution {
         for(int i=0;i<s.length();i++){
             if(s.charAt(i)=='I')
                 res[i]=a++;
-            else if(s.charAt(i)=='D')
+            else
                 res[i]=b--;
         }
         res[n]=a;
