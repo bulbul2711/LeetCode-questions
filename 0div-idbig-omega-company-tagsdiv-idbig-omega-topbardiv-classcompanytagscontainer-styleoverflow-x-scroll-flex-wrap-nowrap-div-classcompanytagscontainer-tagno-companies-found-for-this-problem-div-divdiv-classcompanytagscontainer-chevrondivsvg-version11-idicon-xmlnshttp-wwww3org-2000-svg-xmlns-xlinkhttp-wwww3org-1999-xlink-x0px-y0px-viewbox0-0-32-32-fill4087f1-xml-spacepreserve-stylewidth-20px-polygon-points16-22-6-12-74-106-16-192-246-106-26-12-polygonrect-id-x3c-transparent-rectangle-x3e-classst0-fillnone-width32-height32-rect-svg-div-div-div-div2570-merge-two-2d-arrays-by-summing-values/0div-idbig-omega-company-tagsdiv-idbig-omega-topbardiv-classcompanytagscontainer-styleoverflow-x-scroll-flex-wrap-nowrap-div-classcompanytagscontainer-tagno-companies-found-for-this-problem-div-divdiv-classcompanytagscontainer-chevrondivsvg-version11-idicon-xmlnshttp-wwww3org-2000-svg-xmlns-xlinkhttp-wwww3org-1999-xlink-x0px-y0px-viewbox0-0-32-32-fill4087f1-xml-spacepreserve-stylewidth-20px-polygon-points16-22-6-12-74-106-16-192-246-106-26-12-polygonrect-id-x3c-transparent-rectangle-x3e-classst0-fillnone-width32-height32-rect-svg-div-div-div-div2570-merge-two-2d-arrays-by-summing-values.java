@@ -1,7 +1,7 @@
 class Solution {
     public int[][] mergeArrays(int[][] nums1, int[][] nums2) {
         int i=0,j=0;
-        Map<Integer,Integer> map = new HashMap<>();
+        TreeMap<Integer,Integer> map = new TreeMap<>();
         while(i<nums1.length && j<nums2.length){
             int x=nums1[i][0];
             int y=nums2[j][0];
@@ -34,7 +34,7 @@ class Solution {
             res[a][1]=entry.getValue();
             a++;
         }
-        Arrays.sort(res,Comparator.comparingInt(x->x[0]));
+       // Arrays.sort(res,Comparator.comparingInt(x->x[0]));
         return res;
     }
 }
