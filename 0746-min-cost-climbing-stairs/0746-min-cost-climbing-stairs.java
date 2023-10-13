@@ -1,5 +1,6 @@
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
+        /*memoization*/
     //     int n=cost.length;
     //     int[] dp=new int[n];
     //     return Math.min(mincost(cost,n-1,dp),mincost(cost,n-2,dp));
@@ -13,6 +14,7 @@ class Solution {
     //     return dp[n];
         
         
+        /*Tabulation*/
         // int n=cost.length;
         // int[] dp=new int[n];
         // dp[0]=cost[0];
@@ -21,6 +23,8 @@ class Solution {
         // dp[i]=cost[i]+Math.min(dp[i-1],dp[i-2]);
         // return Math.min(dp[n-1],dp[n-2]);
         
+        
+        /*Space optimization*/
         int n=cost.length;
         int prev=cost[0];
         int curr=cost[1];
