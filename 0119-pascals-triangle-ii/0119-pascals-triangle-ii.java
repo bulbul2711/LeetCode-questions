@@ -1,6 +1,5 @@
 class Solution {
     public List<Integer> getRow(int rowIndex) {
-        //List<List<Integer>> res=new ArrayList<List<Integer>>();
         List<Integer> prev=null;
         List<Integer> curr=null;
         for(int i=0;i<=rowIndex;i++){
