@@ -47,7 +47,7 @@ class BSTIterator{
 class Solution {
     public boolean findTarget(TreeNode root, int k) {
         BSTIterator l = new BSTIterator(root,false);
-        BSTIterator r = new BSTIterator(root,true);
+        BSTIterator r = new BSTIterator(root,true); //one obj is maintaining asc inorder and another obj is maintaining desc inorder
         int i=l.next();
         int j=r.next();
         while(i!=j){
