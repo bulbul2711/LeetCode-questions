@@ -25,7 +25,7 @@ class Solution {
                 mid=root;
             }
             else
-                last=root;
+                last=root;       //yeh samajh nhi aaya last violation me ek hi store kyu kiya
         }
         prev=root;
         inorder(root.right);
