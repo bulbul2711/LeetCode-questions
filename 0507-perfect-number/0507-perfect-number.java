@@ -1,7 +1,8 @@
 class Solution {
     public boolean checkPerfectNumber(int num) {
-        int c=0;
-        for(int i=1;i<num;i++){
+        if(num==1) return false;
+        int c=1;
+        for(int i=2;i<=num/2;i++){
             if(num%i==0)
                 c+=i;
         }
