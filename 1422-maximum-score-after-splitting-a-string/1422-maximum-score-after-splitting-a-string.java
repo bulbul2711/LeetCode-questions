@@ -7,7 +7,6 @@ class Solution {
             l=s.substring(0,i+1);
             r=s.substring(i+1);
             sum1=sumleft(l)+sumright(r);
-            System.out.println(sumleft(l)+" "+sumright(r));
             max=Math.max(max,sum1);
         }
         return max;
