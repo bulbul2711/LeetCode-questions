@@ -32,7 +32,7 @@ class Solution {
 //         root.right = build(preorder, preStart+numsLeft+1, preEnd,  inorder, inroot+1, inEnd, map);  
 //         return root;
         
-          if (preorder == null || inorder == null || preorder.length == 0 || inorder.length == 0) {
+          if (preorder.length == 0 || inorder.length == 0) {
             return null;
         }
 
