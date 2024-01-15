@@ -1,28 +1,27 @@
 class Solution {
     public List<List<Integer>> findWinners(int[][] matches) {
+        int[] losses=new int[100001];
+        List<Integer> zero=new ArrayList<>();
+          List<Integer> one=new ArrayList<>();
         List<List<Integer>> ans=new ArrayList<>();
-        List<Integer> l1=new ArrayList<>();
-        List<Integer> l2=new ArrayList<>();
-        HashMap<Integer,Integer> winner=new HashMap<>();
-         HashMap<Integer,Integer> loser=new HashMap<>();
         for(int i=0;i<matches.length;i++){
-            winner.put(matches[i][0],winner.getOrDefault(matches[i][0],0)+1);
-            loser.put(matches[i][1],loser.getOrDefault(matches[i][1],0)+1);
+            int win=matches[i][0];
+            int loss=matches[i][1];
+            if(losses[win]==0)
+                losses[win]=-1;//taaki jo numbers h hi ni matches me woh na aay ans me
+            if(losses[loss]==-1)
+                losses[loss]=1;
+            else
+                losses[loss]++;
         }
-        for(Map.Entry<Integer,Integer> entry:winner.entrySet()){
-            int a=entry.getKey();
-            if(!loser.containsKey(a))
-                l1.add(a);
+        for(int i=0;i<losses.length;i++){
+            if(losses[i]==-1)
+                zero.add(i);
+            else if(losses[i]==1)
+                one.add(i);
         }
-         for(Map.Entry<Integer,Integer> entry:loser.entrySet()){
-            int a=entry.getKey();
-             if(loser.get(a)==1)
-                 l2.add(a);
-        }
-        ans.add(l1);
-        ans.add(l2);
-        for(int i=0;i<2;i++)
-            Collections.sort(ans.get(i));
+        ans.add(zero);
+        ans.add(one);
         return ans;
     }
 }
