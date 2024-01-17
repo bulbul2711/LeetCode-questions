@@ -17,10 +17,8 @@ class Solution {
     ArrayList<Integer> al=new ArrayList<>();
     public List<Integer> postorderTraversal(TreeNode root) {
         if(root!=null){
-            if(root.left!=null)
-                postorderTraversal(root.left);
-            if(root.right!=null)
-                postorderTraversal(root.right);
+            postorderTraversal(root.left);
+            postorderTraversal(root.right);
             al.add(root.val);
         }
         return al;
