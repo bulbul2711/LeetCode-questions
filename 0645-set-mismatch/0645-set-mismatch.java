@@ -11,7 +11,7 @@ class Solution {
         for(int i=1;i<=nums.length;i++){
             if(a[i]==1)
                 ans[0]=i;
-            if(a[i]==0)
+            else if(a[i]==0)
                 ans[1]=i;
         }
         return ans;
