@@ -1,6 +1,6 @@
 class Solution {
     public int evalRPN(String[] tokens) {
-        Stack<Integer> st=new Stack<>();
+        Deque<Integer> st=new ArrayDeque<>();
         for(int i=0;i<tokens.length;i++){
             if(tokens[i].equals("+") || tokens[i].equals("-") || tokens[i].equals("*") || tokens[i].equals("/")){
                 st.push(func(tokens[i],st.pop(),st.pop()));
