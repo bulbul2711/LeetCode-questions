@@ -2,13 +2,11 @@ class Solution {
     public String firstPalindrome(String[] words) {
         String s1 ="";
         for(int i=0;i<words.length;i++)
-            if(palindrome(words[i]))
-            {
+            if(palindrome(words[i])){
                 s1= words[i];
                 break;
             }
-        
-            return s1;
+         return s1;
     }
     
     boolean palindrome(String s)
