@@ -9,17 +9,26 @@ class Solution {
         }
         return actual_sum-sum;*/
         
+//         for(int i=0;i<nums.length;i++){
+//             while(nums[i]<nums.length && i!=nums[i]){
+//                 int temp=nums[nums[i]];
+//                 nums[nums[i]]=nums[i];
+//                 nums[i]=temp;
+//             }
+//         }
+//         for(int i=0;i<nums.length;i++){
+//             if(i!=nums[i])
+//                 return i;
+//         }
+//         return nums.length;
+        int[] a=new int[nums.length+1];
         for(int i=0;i<nums.length;i++){
-            while(nums[i]<nums.length && i!=nums[i]){
-                int temp=nums[nums[i]];
-                nums[nums[i]]=nums[i];
-                nums[i]=temp;
-            }
+            a[nums[i]]=-1;
         }
-        for(int i=0;i<nums.length;i++){
-            if(i!=nums[i])
+        for(int i=0;i<a.length;i++){
+            if(a[i]!=-1)
                 return i;
         }
-        return nums.length;
+        return -1;
     }
 }
