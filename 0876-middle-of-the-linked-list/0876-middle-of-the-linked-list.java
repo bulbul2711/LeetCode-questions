@@ -19,6 +19,8 @@ class Solution {
             fast=fast.next.next;
         }
         return slow;
+        
+        //second approach
       /*  int c=0;
         if(head==null)
             return head;
