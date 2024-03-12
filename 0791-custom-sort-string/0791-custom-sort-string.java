@@ -1,6 +1,6 @@
 class Solution {
     public String customSortString(String order, String s) {
-     int[] a=new int[26];
+        int[] a=new int[26];
         for(int i=0;i<s.length();i++){
             a[s.charAt(i)-'a']++;
         }
