@@ -31,5 +31,5 @@ class Solution {
         prev=prev.next;
     }
         return true;
-}
+   }
 }
