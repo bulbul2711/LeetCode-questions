@@ -6,13 +6,10 @@ class Solution {
         while(s.charAt(i)==' '){
             i--;
         }
-     
         int j=i;
         while(j>=0 && s.charAt(j)!=' '){
             j--;
         }
-        // if(j==-1)
-        //     return i-j+1;
         return i-j;
     }
 }
