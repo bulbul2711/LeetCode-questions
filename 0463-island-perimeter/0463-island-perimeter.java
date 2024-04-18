@@ -6,7 +6,7 @@ class Solution {
                 if(grid[i][j]==1){
                     perimeter+=4;
                     if(j>0 && grid[i][j-1]==1)
-                            perimeter--;
+                        perimeter--;
                     if(j<grid[i].length-1 && grid[i][j+1]==1)
                         perimeter--;
                     if(i>0 && grid[i-1][j]==1)
