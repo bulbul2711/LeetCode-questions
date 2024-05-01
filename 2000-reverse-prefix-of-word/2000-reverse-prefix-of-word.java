@@ -6,12 +6,12 @@ class Solution {
             return word;
         else{
             int l=0,r=index;
-           
             while(l<r){
                 char ch3=a[l];
                 a[l]=a[r];
                 a[r]=ch3;
-                l++;r--;
+                l++;
+                r--;
             }
           }
       return String.valueOf(a);
