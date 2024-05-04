@@ -6,7 +6,7 @@ class Solution {
         while(l<=r){
             sum=people[l]+people[r];
             if(sum>limit)
-                r--;
+                r--;         //and count one boat for it because if it cannot be paired with the lightest weight person then it need to travel alone  
             else{
                 l++;
                 r--;
