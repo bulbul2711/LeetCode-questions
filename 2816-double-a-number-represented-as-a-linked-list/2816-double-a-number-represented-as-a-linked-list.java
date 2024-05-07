@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode doubleIt(ListNode head) {
-        Stack<Integer> st = new Stack<>();
+        ArrayDeque<Integer> st = new ArrayDeque<>();
         ListNode curr=head;
         while(curr!=null){
             st.add(curr.val);
@@ -19,7 +19,7 @@ class Solution {
         ListNode a=null;
         int x=0;
         while(!st.isEmpty()){
-            int y=st.pop();
+            int y=st.removeLast();
             a=new ListNode((y*2)%10+x,a);
             x=(y*2)/10;
         }
