@@ -1,14 +1,11 @@
 class Solution {
     public String[] findRelativeRanks(int[] score) {
         int n=score.length;
-        // int[] temp=Arrays.copyOfRange(0,n);
-        // Arrays.sort(score).reverseOrder();
         List<Integer> list=new ArrayList<>();
         for(int i=0;i<n;i++)
             list.add(score[i]);
         Arrays.sort(score);
         String[] ans=new String[n];
-       
         for(int i=n-1;i>=0;i--){
             int x=list.indexOf(score[i]);
             if(i==n-1)
