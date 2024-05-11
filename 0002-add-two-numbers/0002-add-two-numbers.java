@@ -24,12 +24,8 @@ class Solution {
             
             if(l1!=null) 
                 l1=l1.next;
-            // else 
-            //     l1=null;
             if(l2!=null) 
                 l2=l2.next;
-            // else 
-            //     l2=null;
         }
         return dummy.next;
     }
