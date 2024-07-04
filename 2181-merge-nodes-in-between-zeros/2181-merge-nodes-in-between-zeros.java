@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode mergeNodes(ListNode head) {
-        ListNode curr=head;
+         ListNode curr=head;
         ListNode tail=head.next;
         int sum=0;
         while(tail!=null){
@@ -27,6 +27,6 @@ class Solution {
             curr=curr.next;
         }
         }
-        return head.next;   
+        return head.next;  
     }
 }
